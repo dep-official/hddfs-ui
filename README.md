@@ -43,6 +43,15 @@ build/
   └── css/             # 컴파일된 CSS 파일
 ```
 
+## 페이지 확인
+
+`src/pages/` 디렉토리에서 페이지를 확인할 수 있습니다:
+
+- **Event Page**: `src/pages/event/event.html` - 이벤트 샘플 페이지
+- **Components Page**: `components.html` - 컴포넌트 디자인 시스템
+
+로컬 서버 실행 후 브라우저에서 해당 경로로 접속하세요.
+
 ## 주의사항
 
 - HTML 파일을 직접 열면 (`file://` 프로토콜) CORS 에러가 발생합니다.
