@@ -1,0 +1,40 @@
+<section class="notice" aria-label="유의사항">
+  <hr class="notice__divider" aria-hidden="true" />
+
+  <!-- 제목 영역 -->
+  <div class="notice__header">
+    <img
+      src="/images/icons/ic-m-exclamation-16.svg"
+      alt=""
+      class="notice__icon"
+      aria-hidden="true"
+    />
+    <h3 class="notice__title">유의사항</h3>
+  </div>
+
+  <!-- 항목 리스트 -->
+  <ul class="notice__list">
+    <li class="notice__item">
+      <span class="notice__bullet" aria-hidden="true"></span>
+      <p class="notice__text">일반 유의사항 항목입니다.</p>
+    </li>
+    <li class="notice__item">
+      <span class="notice__bullet notice__bullet--important" aria-hidden="true"></span>
+      <p class="notice__text notice__text--important">중요한 유의사항 항목입니다.</p>
+    </li>
+    <li class="notice__item">
+      <span class="notice__bullet" aria-hidden="true"></span>
+      <p class="notice__text">또 다른 일반 항목입니다.</p>
+    </li>
+  </ul>
+
+  <!-- 하단 버튼 -->
+  <button
+    class="btn btn--gradient btn--medium btn--full notice__button"
+    type="button"
+    aria-label="더 많은 사은행사가 궁금하다면"
+    data-onclick="onNoticeButtonClick"
+  >
+    더 많은 사은행사가 궁금하다면
+  </button>
+</section>

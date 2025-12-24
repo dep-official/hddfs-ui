@@ -1,0 +1,21 @@
+// Dialog Indicator Component (BEM)
+@use '../../../../shared/styles/variables' as *;
+
+.dialog-indicator {
+  width: 40px;
+  height: 4px;
+  background-color: $color-border;
+  border-radius: 2px;
+  margin: 8px auto;
+
+  &--top {
+    margin-top: 8px;
+    margin-bottom: 0;
+  }
+
+  &--bottom {
+    margin-top: 0;
+    margin-bottom: 8px;
+  }
+}
+

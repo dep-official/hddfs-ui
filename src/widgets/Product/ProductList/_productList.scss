@@ -1,0 +1,21 @@
+// Product List Widget (BEM)
+@use '../../../shared/styles/variables' as *;
+@use '../../../shared/styles/mixins' as *;
+
+.product-list {
+  width: 100%;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 9px 9px; // gap-x gap-y (모바일)
+    row-gap: 32px; // gap-y-8
+
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px 24px; // gap-x gap-y (PC)
+      row-gap: 48px; // gap-y-[48px]
+    }
+  }
+}
+

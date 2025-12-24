@@ -1,0 +1,147 @@
+// Dialog Widget (BEM)
+@use '../../shared/styles/variables' as *;
+
+.dialog {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  max-width: 335px;
+  height: auto;
+  max-height: 90vh;
+  margin: auto;
+  padding: 0;
+  border: none;
+  border-radius: 8px;
+  background-color: $color-white;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+
+  // 배경 오버레이
+  &::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    border-bottom: 1px solid $color-border;
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.44em;
+    letter-spacing: -0.05em;
+    color: $color-black;
+    margin: 0;
+  }
+
+  &__close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: $color-hover;
+    }
+
+    &:active {
+      background-color: $color-active;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__close-icon {
+    width: 20px;
+    height: 20px;
+    color: $color-slate-grey;
+  }
+
+  &__content {
+    padding: 16px 20px;
+    overflow-y: auto;
+    max-height: 60vh;
+  }
+
+  &__content-text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5em;
+    letter-spacing: -0.05em;
+    color: $color-medium-dark;
+    margin: 0;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 20px;
+    border-top: 1px solid $color-border;
+    justify-content: flex-end;
+  }
+
+  &__action-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    height: 48px;
+    padding: 0 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5em;
+    letter-spacing: -0.05em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px $color-dark;
+    }
+
+    &--cancel {
+      background-color: transparent;
+      color: $color-black;
+      border: 1px solid transparent;
+
+      &:hover {
+        background-color: $color-hover;
+      }
+
+      &:active {
+        background-color: $color-active;
+      }
+    }
+
+    &--confirm {
+      background-color: $color-dark;
+      color: $color-white;
+
+      &:hover {
+        background-color: #2B2F35;
+      }
+
+      &:active {
+        background-color: #16181D;
+      }
+    }
+  }
+}
+

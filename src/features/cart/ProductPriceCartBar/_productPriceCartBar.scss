@@ -1,0 +1,105 @@
+// ProductPriceCartBar Component (BEM)
+@use '../../../shared/styles/variables' as *;
+@use '../../../shared/styles/mixins';
+
+.product-price-cart-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 47px;
+
+  &__price {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin: 0;
+  }
+
+  &__label-text {
+    color: $color-dark;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 1.462em;
+    letter-spacing: -0.05em;
+  }
+
+  &__original-price {
+    color: #abb2be;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.429em;
+    letter-spacing: -0.05em;
+    text-decoration: line-through;
+  }
+
+  &__value {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin: 0;
+  }
+
+  &__discount-rate {
+    color: $color-dark;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.5em;
+    letter-spacing: -0.05em;
+  }
+
+  &__discount-price {
+    color: #ea2829;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.5em;
+    letter-spacing: -0.05em;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 6px 12px 7px 14px; // py-[6px] px-[12px] pr-[14px] pb-[7px]
+    background-color: $color-dark;
+    color: $color-white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: #2b2f35;
+    }
+
+    &:active {
+      background-color: #16181d;
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+
+  &__icon {
+    width: 16px; // w-4
+    height: 16px; // h-4
+  }
+
+  &__button-text {
+    color: $color-white;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 1.462em;
+    letter-spacing: -0.05em;
+  }
+}
+

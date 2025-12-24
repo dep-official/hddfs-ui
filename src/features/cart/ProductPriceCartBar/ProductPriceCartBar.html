@@ -1,0 +1,33 @@
+<div class="product-price-cart-bar">
+  <!-- 가격 정보 영역 -->
+  <dl class="product-price-cart-bar__price">
+    <!-- 할인적용가 및 원가 -->
+    <dt class="product-price-cart-bar__label">
+      <span class="product-price-cart-bar__label-text">할인적용가</span>
+      <span class="product-price-cart-bar__original-price">$100</span>
+    </dt>
+
+    <!-- 할인가 및 할인율 -->
+    <dd class="product-price-cart-bar__value">
+      <span class="product-price-cart-bar__discount-rate">20%</span>
+      <span class="product-price-cart-bar__discount-price">$80</span>
+    </dd>
+  </dl>
+
+  <!-- 장바구니 담기 버튼 -->
+  <button
+    type="button"
+    class="product-price-cart-bar__button"
+    aria-label="장바구니에 담기"
+    data-onclick="onAddToCart"
+  >
+    <img
+      src="./images/icons/ic-m-shoppinbag-16.svg"
+      alt=""
+      class="product-price-cart-bar__icon"
+      aria-hidden="true"
+    />
+    <span class="product-price-cart-bar__button-text">담기</span>
+  </button>
+</div>
+

@@ -1,0 +1,52 @@
+// Icon Button Component (BEM)
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+.icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: none;
+  background-color: transparent;
+  color: $color-dark;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    opacity 0.2s ease;
+
+  &:hover {
+    background-color: $color-hover;
+  }
+
+  &:active {
+    background-color: $color-active;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &--sm {
+    width: 24px;
+    height: 24px;
+  }
+
+  &--md {
+    width: 32px;
+    height: 32px;
+  }
+
+  &--lg {
+    width: 40px;
+    height: 40px;
+  }
+
+  &__icon {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+

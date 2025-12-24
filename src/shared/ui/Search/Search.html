@@ -1,0 +1,45 @@
+<div class="search-bar">
+  <div class="search-bar__inner">
+    <!-- Back 버튼 -->
+    <button
+      type="button"
+      class="search-bar__back"
+      aria-label="뒤로가기"
+      data-onback="onSearchBack"
+    >
+      <img
+        src="./images/icons/back-24px.svg"
+        alt="뒤로가기"
+        class="search-bar__icon"
+      />
+    </button>
+
+    <!-- 검색 입력 필드 -->
+    <input
+      type="text"
+      class="search-bar__input"
+      placeholder="브랜드명으로 검색해보세요"
+      value=""
+      aria-label="검색 입력"
+      data-onchange="onSearchChange"
+    />
+
+    <!-- Search 버튼 -->
+    <button
+      type="button"
+      class="search-bar__search"
+      aria-label="검색"
+      data-onsearch="onSearchClick"
+    >
+      <img
+        src="./images/icons/search-24px.svg"
+        alt="검색"
+        class="search-bar__icon"
+      />
+    </button>
+  </div>
+
+  <!-- 구분선 -->
+  <hr class="search-bar__divider" aria-hidden="true" />
+</div>
+

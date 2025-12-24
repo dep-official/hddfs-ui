@@ -1,0 +1,38 @@
+// Header Component (BEM)
+@use '../../shared/styles/variables' as *;
+@use '../../shared/styles/mixins';
+
+.header__nav {
+  border-bottom: 1px solid $color-border;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px; // px-5
+
+  // 실제 페이지에서는 lg:hidden 적용
+  // @media (min-width: 1024px) {
+  //   display: none;
+  // }
+}
+
+.header__title {
+  flex: 1;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 18px;
+  font-weight: 700;
+  color: $color-dark;
+  line-height: 1.5em;
+  letter-spacing: -0.05em;
+  margin: 0;
+}
+
+.header__right {
+  display: flex;
+  align-items: center;
+  gap: 16px; // gap-4
+}
+

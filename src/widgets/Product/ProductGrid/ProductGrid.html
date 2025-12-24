@@ -1,0 +1,238 @@
+<!-- Product Grid Widget -->
+<ul class="product-grid">
+  <li class="product-grid__item">
+    <div data-include="/src/features/product/ui/ProductCard/ProductCard.html"></div>
+  </li>
+  <li class="product-grid__item">
+    <div class="product-card product-card--compact" data-sold-out="false">
+      <figure class="product-card__image">
+        <img src="/images/products/product-2.png" alt="상품명" class="product-card__img" />
+        <button type="button" class="product-card__cart-button" aria-label="장바구니 담기">
+          <img src="/images/icons/ic-m-shoppinbag.svg" alt="" class="product-card__cart-icon" />
+        </button>
+      </figure>
+      <div class="product-card__content">
+        <dl class="product-card__info">
+          <dt class="product-card__brand">브랜드명</dt>
+          <p class="product-card__md-keyword">MD 추천</p>
+          <dd class="product-card__name">상품명입니다</dd>
+        </dl>
+        <div class="product-card__price">
+          <div class="product-card__discount">
+            <span class="product-card__discount-rate">15%</span>
+            <span class="product-card__original-price">$100</span>
+          </div>
+          <div class="product-card__price-row">
+            <span class="product-card__discount-price">$85</span>
+            <span class="product-card__price-won">106,250원</span>
+          </div>
+        </div>
+        <ul class="product-card__flags">
+          <li class="tag tag--flag">무료배송</li>
+          <li class="tag tag--flag">특가</li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="product-grid__item">
+    <div class="product-card product-card--compact" data-sold-out="true">
+      <figure class="product-card__image">
+        <img src="/images/products/product-3.png" alt="상품명" class="product-card__img" />
+        <button type="button" class="product-card__restock-button" aria-label="재입고 알림">
+          <span class="badge badge--restock">재입고 알림</span>
+        </button>
+      </figure>
+      <div class="product-card__content">
+        <dl class="product-card__info">
+          <dt class="product-card__brand">브랜드명</dt>
+          <dd class="product-card__name">품절 상품명입니다</dd>
+        </dl>
+        <div class="product-card__price">
+          <div class="product-card__price-row">
+            <span class="product-card__discount-price">$80</span>
+            <span class="product-card__price-won">100,000원</span>
+          </div>
+        </div>
+        <ul class="product-card__flags">
+          <li class="tag tag--flag">무료배송</li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="product-grid__item">
+    <div class="product-card product-card--compact" data-sold-out="false">
+      <figure class="product-card__image">
+        <img src="/images/products/product-4.png" alt="상품명" class="product-card__img" />
+        <button type="button" class="product-card__video-button" aria-label="영상 재생">
+          <img src="/images/icons/ic-m-play.svg" alt="" class="product-card__video-icon" />
+        </button>
+        <button type="button" class="product-card__cart-button" aria-label="장바구니 담기">
+          <img src="/images/icons/ic-m-shoppinbag.svg" alt="" class="product-card__cart-icon" />
+        </button>
+      </figure>
+      <div class="product-card__content">
+        <dl class="product-card__info">
+          <dt class="product-card__brand">브랜드명</dt>
+          <dd class="product-card__name">영상이 있는 상품</dd>
+        </dl>
+        <div class="product-card__price">
+          <div class="product-card__price-row">
+            <span class="product-card__discount-price">$90</span>
+            <span class="product-card__price-won">112,500원</span>
+          </div>
+        </div>
+        <ul class="product-card__flags">
+          <li class="tag tag--flag">특가</li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="product-grid__item">
+    <div class="product-card product-card--compact" data-sold-out="false">
+      <figure class="product-card__image">
+        <img src="/images/products/product-5.png" alt="상품명" class="product-card__img" />
+        <button type="button" class="product-card__cart-button" aria-label="장바구니 담기">
+          <img src="/images/icons/ic-m-shoppinbag.svg" alt="" class="product-card__cart-icon" />
+        </button>
+      </figure>
+      <div class="product-card__content">
+        <dl class="product-card__info">
+          <dt class="product-card__brand">브랜드명</dt>
+          <dd class="product-card__name">상품명입니다</dd>
+        </dl>
+        <div class="product-card__price">
+          <div class="product-card__discount">
+            <span class="product-card__discount-rate">25%</span>
+            <span class="product-card__original-price">$100</span>
+          </div>
+          <div class="product-card__price-row">
+            <span class="product-card__discount-price">$75</span>
+            <span class="product-card__price-won">93,750원</span>
+          </div>
+        </div>
+        <ul class="product-card__flags">
+          <li class="tag tag--flag">무료배송</li>
+          <li class="tag tag--flag">특가</li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="product-grid__item">
+    <div class="product-card product-card--compact" data-sold-out="false">
+      <figure class="product-card__image">
+        <img src="/images/products/product-6.png" alt="상품명" class="product-card__img" />
+        <button type="button" class="product-card__cart-button" aria-label="장바구니 담기">
+          <img src="/images/icons/ic-m-shoppinbag.svg" alt="" class="product-card__cart-icon" />
+        </button>
+      </figure>
+      <div class="product-card__content">
+        <dl class="product-card__info">
+          <dt class="product-card__brand">브랜드명</dt>
+          <p class="product-card__md-keyword">MD 추천</p>
+          <dd class="product-card__name">상품명입니다</dd>
+        </dl>
+        <div class="product-card__price">
+          <div class="product-card__discount">
+            <span class="product-card__discount-rate">30%</span>
+            <span class="product-card__original-price">$100</span>
+          </div>
+          <div class="product-card__price-row">
+            <span class="product-card__discount-price">$70</span>
+            <span class="product-card__price-won">87,500원</span>
+          </div>
+        </div>
+        <ul class="product-card__flags">
+          <li class="tag tag--flag">무료배송</li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="product-grid__item">
+    <div class="product-card product-card--compact" data-sold-out="false">
+      <figure class="product-card__image">
+        <img src="/images/products/product-7.png" alt="상품명" class="product-card__img" />
+        <button type="button" class="product-card__cart-button" aria-label="장바구니 담기">
+          <img src="/images/icons/ic-m-shoppinbag.svg" alt="" class="product-card__cart-icon" />
+        </button>
+      </figure>
+      <div class="product-card__content">
+        <dl class="product-card__info">
+          <dt class="product-card__brand">브랜드명</dt>
+          <dd class="product-card__name">상품명입니다</dd>
+        </dl>
+        <div class="product-card__price">
+          <div class="product-card__discount">
+            <span class="product-card__discount-rate">10%</span>
+            <span class="product-card__original-price">$100</span>
+          </div>
+          <div class="product-card__price-row">
+            <span class="product-card__discount-price">$90</span>
+            <span class="product-card__price-won">112,500원</span>
+          </div>
+        </div>
+        <ul class="product-card__flags">
+          <li class="tag tag--flag">특가</li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="product-grid__item">
+    <div class="product-card product-card--compact" data-sold-out="false">
+      <figure class="product-card__image">
+        <img src="/images/products/product-8.png" alt="상품명" class="product-card__img" />
+        <button type="button" class="product-card__cart-button" aria-label="장바구니 담기">
+          <img src="/images/icons/ic-m-shoppinbag.svg" alt="" class="product-card__cart-icon" />
+        </button>
+      </figure>
+      <div class="product-card__content">
+        <dl class="product-card__info">
+          <dt class="product-card__brand">브랜드명</dt>
+          <dd class="product-card__name">상품명입니다</dd>
+        </dl>
+        <div class="product-card__price">
+          <div class="product-card__discount">
+            <span class="product-card__discount-rate">20%</span>
+            <span class="product-card__original-price">$100</span>
+          </div>
+          <div class="product-card__price-row">
+            <span class="product-card__discount-price">$80</span>
+            <span class="product-card__price-won">100,000원</span>
+          </div>
+        </div>
+        <ul class="product-card__flags">
+          <li class="tag tag--flag">무료배송</li>
+          <li class="tag tag--flag">특가</li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="product-grid__item">
+    <div class="product-card product-card--compact" data-sold-out="false">
+      <figure class="product-card__image">
+        <img src="/images/products/product-9.png" alt="상품명" class="product-card__img" />
+        <button type="button" class="product-card__cart-button" aria-label="장바구니 담기">
+          <img src="/images/icons/ic-m-shoppinbag.svg" alt="" class="product-card__cart-icon" />
+        </button>
+      </figure>
+      <div class="product-card__content">
+        <dl class="product-card__info">
+          <dt class="product-card__brand">브랜드명</dt>
+          <dd class="product-card__name">상품명입니다</dd>
+        </dl>
+        <div class="product-card__price">
+          <div class="product-card__discount">
+            <span class="product-card__discount-rate">35%</span>
+            <span class="product-card__original-price">$100</span>
+          </div>
+          <div class="product-card__price-row">
+            <span class="product-card__discount-price">$65</span>
+            <span class="product-card__price-won">81,250원</span>
+          </div>
+        </div>
+        <ul class="product-card__flags">
+          <li class="tag tag--flag">무료배송</li>
+        </ul>
+      </div>
+    </div>
+  </li>
+</ul>

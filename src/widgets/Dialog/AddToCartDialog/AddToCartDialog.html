@@ -1,0 +1,142 @@
+<!-- Add To Cart Dialog -->
+<dialog
+  class="add-to-cart-dialog"
+  id="add-to-cart-dialog-demo"
+  role="dialog"
+  aria-labelledby="dialog-title"
+  aria-modal="true"
+>
+  <div class="add-to-cart-dialog__container">
+    <!-- Dialog Header -->
+    <div data-include="/src/widgets/Dialog/ui/DialogHeader.html"></div>
+
+    <!-- 세트 정보: 할인율 및 제품명 -->
+    <div class="add-to-cart-dialog__info">
+      <span class="add-to-cart-dialog__discount-rate">36%</span>
+      <p class="add-to-cart-dialog__product-name">풀리오 최강 마사지 조합 풀리오 세트 A</p>
+    </div>
+
+    <!-- 본문: 상품 리스트 (BannerItem 스타일) -->
+    <div class="add-to-cart-dialog__body">
+      <section class="banner-list" aria-label="상품 목록">
+        <!-- 상품 1 -->
+        <article class="banner-item">
+          <div class="banner-item__container">
+            <figure class="banner-item__image">
+              <img src="/images/products/product-1.png" alt="상품명" class="banner-item__img" loading="lazy" />
+            </figure>
+            <div class="banner-item__content">
+              <h3 class="banner-item__title">브랜드명</h3>
+              <p class="banner-item__description">상품명입니다</p>
+            </div>
+          </div>
+          <hr class="banner-item__divider" aria-hidden="true" />
+        </article>
+
+        <!-- 상품 2 -->
+        <article class="banner-item">
+          <div class="banner-item__container">
+            <figure class="banner-item__image">
+              <img src="/images/products/product-2.png" alt="상품명" class="banner-item__img" loading="lazy" />
+            </figure>
+            <div class="banner-item__content">
+              <h3 class="banner-item__title">브랜드명</h3>
+              <p class="banner-item__description">상품명입니다</p>
+            </div>
+          </div>
+          <hr class="banner-item__divider" aria-hidden="true" />
+        </article>
+
+        <!-- 상품 3 -->
+        <article class="banner-item">
+          <div class="banner-item__container">
+            <figure class="banner-item__image">
+              <img src="/images/products/product-3.png" alt="상품명" class="banner-item__img" loading="lazy" />
+            </figure>
+            <div class="banner-item__content">
+              <h3 class="banner-item__title">브랜드명</h3>
+              <p class="banner-item__description">상품명입니다</p>
+            </div>
+          </div>
+          <hr class="banner-item__divider" aria-hidden="true" />
+        </article>
+
+        <!-- 상품 4 -->
+        <article class="banner-item">
+          <div class="banner-item__container">
+            <figure class="banner-item__image">
+              <img src="/images/products/product-4.png" alt="상품명" class="banner-item__img" loading="lazy" />
+            </figure>
+            <div class="banner-item__content">
+              <h3 class="banner-item__title">브랜드명</h3>
+              <p class="banner-item__description">상품명입니다</p>
+            </div>
+          </div>
+          <hr class="banner-item__divider" aria-hidden="true" />
+        </article>
+
+        <!-- 상품 5 -->
+        <article class="banner-item">
+          <div class="banner-item__container">
+            <figure class="banner-item__image">
+              <img src="/images/products/product-5.png" alt="상품명" class="banner-item__img" loading="lazy" />
+            </figure>
+            <div class="banner-item__content">
+              <h3 class="banner-item__title">브랜드명</h3>
+              <p class="banner-item__description">상품명입니다</p>
+            </div>
+          </div>
+          <hr class="banner-item__divider" aria-hidden="true" />
+        </article>
+
+        <!-- 상품 6 -->
+        <article class="banner-item">
+          <div class="banner-item__container">
+            <figure class="banner-item__image">
+              <img src="/images/products/product-6.png" alt="상품명" class="banner-item__img" loading="lazy" />
+            </figure>
+            <div class="banner-item__content">
+              <h3 class="banner-item__title">브랜드명</h3>
+              <p class="banner-item__description">상품명입니다</p>
+            </div>
+          </div>
+        </article>
+      </section>
+    </div>
+
+    <!-- 푸터: 수량 조절 및 장바구니 담기 -->
+    <footer class="add-to-cart-dialog__footer">
+      <div class="add-to-cart-dialog__quantity">
+        <div class="quantity-button">
+          <button
+            type="button"
+            class="quantity-button__control quantity-button__control--decrease"
+            aria-label="수량 감소"
+            disabled
+          >
+            <img src="/images/icons/ic-m-minus.svg" alt="감소" class="quantity-button__icon" />
+          </button>
+
+          <span class="quantity-button__value">1</span>
+
+          <button
+            type="button"
+            class="quantity-button__control quantity-button__control--increase"
+            aria-label="수량 증가"
+          >
+            <img src="/images/icons/ic-m-plus.svg" alt="증가" class="quantity-button__icon" />
+          </button>
+        </div>
+      </div>
+
+      <button
+        type="button"
+        class="add-to-cart-dialog__button btn btn--filled btn--medium btn--full"
+        aria-label="장바구니에 담기"
+        data-onclick="onAddToCart"
+      >
+        장바구니 담기
+      </button>
+    </footer>
+  </div>
+</dialog>

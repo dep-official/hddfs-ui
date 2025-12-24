@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>이벤트 페이지</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- 공용 CSS -->
+    <link rel="stylesheet" href="/build/css/main.css" />
+    <!-- Event Page CSS -->
+    <link rel="stylesheet" href="/build/css/pages/event/event.css" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  </head>
+  <body class="event-page">
+    <main>
+      <!-- KV Banner -->
+      <section class="kv-banner" aria-label="네즈 외 7개 브랜드 햇살 가림 상품 기획전">
+        <div class="kv-banner__background" aria-hidden="true"></div>
+
+        <div class="kv-banner__header">
+          <div class="kv-banner__title-group">
+            <p class="kv-banner__period"><time datetime="2024-07-29">2024.07.29</time> ~ 재고소진시까지</p>
+            <h2 class="kv-banner__title">
+              라네즈 외 7개 브랜드<br />
+              햇살 가림 상품 기획전
+            </h2>
+          </div>
+
+          <p class="kv-banner__subtitle">전 구매고객 대상 7개 브랜드 상품 할인!</p>
+        </div>
+
+        <div class="kv-banner__image-container">
+          <figure class="kv-banner__image">
+            <img src="/images/banners/kv05.jpg" alt="KV 배너 메인 제목" class="kv-banner__img" loading="lazy" />
+          </figure>
+        </div>
+      </section>
+
+      <!-- Tab -->
+      <aside class="tabs" id="tabs-example">
+        <ul class="tabs__list">
+          <li class="tabs__item tabs__item--active" data-tab-index="0" data-active="true">
+            <button type="button" class="tabs__button tabs__button--active">행사</button>
+          </li>
+          <li class="tabs__item" data-tab-index="1" data-active="false">
+            <button type="button" class="tabs__button">추천상품</button>
+          </li>
+          <li class="tabs__item" data-tab-index="2" data-active="false">
+            <button type="button" class="tabs__button">전체상품</button>
+          </li>
+        </ul>
+        <div class="tabs__active-bar"></div>
+      </aside>
+
+      <!-- 행사 섹션 (Event 1) -->
+      <section id="section-event" class="event-page__section">
+        <div class="event-page__section-header">
+          <div class="event-page__tag">
+            <span class="tag tag--event">Event 1</span>
+          </div>
+          <div class="event-page__title-group">
+            <h2 class="event-page__title">라네즈 외 7개 브랜드<br />40% 할인</h2>
+            <p class="event-page__subtitle">7개 브랜드의 SUN 제품을 40% 할인가에 만나보세요!</p>
+          </div>
+        </div>
+        <!-- 브랜드 리스트 (모바일) -->
+        <div class="event-page__brands-mobile">
+          <ul class="brand-list-section__grid">
+            <li class="brand" role="button" aria-label="라네즈 브랜드">
+              <figure class="brand__image">
+                <img src="/images/brands/brand-laneige.png" alt="라네즈 브랜드 로고" class="brand__img" />
+              </figure>
+              <h3 class="brand__name">라네즈</h3>
+            </li>
+            <li class="brand" role="button" aria-label="오쏘몰 브랜드">
+              <figure class="brand__image">
+                <img src="/images/brands/brand-orthomol.png" alt="오쏘몰 브랜드 로고" class="brand__img" />
+              </figure>
+              <h3 class="brand__name">오쏘몰</h3>
+            </li>
+            <li class="brand" role="button" aria-label="센트룸 브랜드">
+              <figure class="brand__image">
+                <img src="/images/brands/brand-centrum.png" alt="센트룸 브랜드 로고" class="brand__img" />
+              </figure>
+              <h3 class="brand__name">센트룸</h3>
+            </li>
+            <li class="brand" role="button" aria-label="온누리스토어 브랜드">
+              <figure class="brand__image">
+                <img src="/images/brands/brand-onnuristore.png" alt="온누리스토어 브랜드 로고" class="brand__img" />
+              </figure>
+              <h3 class="brand__name">온누리스토어</h3>
+            </li>
+            <li class="brand" role="button" aria-label="헤어메스 브랜드">
+              <figure class="brand__image">
+                <img src="/images/brands/brand-hairmes.png" alt="헤어메스 브랜드 로고" class="brand__img" />
+              </figure>
+              <h3 class="brand__name">헤어메스</h3>
+            </li>
+            <li class="brand" role="button" aria-label="지앤씨 브랜드">
+              <figure class="brand__image">
+                <img src="/images/brands/brand-gnc.png" alt="지앤씨 브랜드 로고" class="brand__img" />
+              </figure>
+              <h3 class="brand__name">지앤씨(수입)</h3>
+            </li>
+            <li class="brand" role="button" aria-label="솔가 브랜드">
+              <figure class="brand__image">
+                <img src="/images/brands/brand-solgar.png" alt="솔가 브랜드 로고" class="brand__img" />
+              </figure>
+              <h3 class="brand__name">솔가</h3>
+            </li>
+          </ul>
+        </div>
+        <!-- 브랜드 캐러셀 (PC) -->
+        <div class="event-page__brands-desktop">
+          <div class="brand-carousel__container">
+            <div class="brand-carousel__swiper swiper" id="brand-carousel-event1">
+              <ul class="swiper-wrapper brand-carousel__wrapper">
+                <li class="swiper-slide brand-carousel__slide">
+                  <div class="brand" role="button" aria-label="라네즈 브랜드">
+                    <figure class="brand__image">
+                      <img src="/images/brands/brand-laneige.png" alt="라네즈 브랜드 로고" class="brand__img" />
+                    </figure>
+                    <h3 class="brand__name">라네즈</h3>
+                  </div>
+                </li>
+                <li class="swiper-slide brand-carousel__slide">
+                  <div class="brand" role="button" aria-label="오쏘몰 브랜드">
+                    <figure class="brand__image">
+                      <img src="/images/brands/brand-orthomol.png" alt="오쏘몰 브랜드 로고" class="brand__img" />
+                    </figure>
+                    <h3 class="brand__name">오쏘몰</h3>
+                  </div>
+                </li>
+                <li class="swiper-slide brand-carousel__slide">
+                  <div class="brand" role="button" aria-label="센트룸 브랜드">
+                    <figure class="brand__image">
+                      <img src="/images/brands/brand-centrum.png" alt="센트룸 브랜드 로고" class="brand__img" />
+                    </figure>
+                    <h3 class="brand__name">센트룸</h3>
+                  </div>
+                </li>
+                <li class="swiper-slide brand-carousel__slide">
+                  <div class="brand" role="button" aria-label="온누리스토어 브랜드">
+                    <figure class="brand__image">
+                      <img
+                        src="/images/brands/brand-onnuristore.png"
+                        alt="온누리스토어 브랜드 로고"
+                        class="brand__img"
+                      />
+                    </figure>
+                    <h3 class="brand__name">온누리스토어</h3>
+                  </div>
+                </li>
+                <li class="swiper-slide brand-carousel__slide">
+                  <div class="brand" role="button" aria-label="헤어메스 브랜드">
+                    <figure class="brand__image">
+                      <img src="/images/brands/brand-hairmes.png" alt="헤어메스 브랜드 로고" class="brand__img" />
+                    </figure>
+                    <h3 class="brand__name">헤어메스</h3>
+                  </div>
+                </li>
+                <li class="swiper-slide brand-carousel__slide">
+                  <div class="brand" role="button" aria-label="지앤씨 브랜드">
+                    <figure class="brand__image">
+                      <img src="/images/brands/brand-gnc.png" alt="지앤씨 브랜드 로고" class="brand__img" />
+                    </figure>
+                    <h3 class="brand__name">지앤씨(수입)</h3>
+                  </div>
+                </li>
+                <li class="swiper-slide brand-carousel__slide">
+                  <div class="brand" role="button" aria-label="솔가 브랜드">
+                    <figure class="brand__image">
+                      <img src="/images/brands/brand-solgar.png" alt="솔가 브랜드 로고" class="brand__img" />
+                    </figure>
+                    <h3 class="brand__name">솔가</h3>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- 이전 버튼 -->
+            <button type="button" class="brand-carousel__button brand-carousel__button--prev" aria-label="이전 브랜드">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M15 18L9 12L15 6"
+                  stroke="#1B1E23"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+
+            <!-- 다음 버튼 -->
+            <button type="button" class="brand-carousel__button brand-carousel__button--next" aria-label="다음 브랜드">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9 18L15 12L9 6"
+                  stroke="#1B1E23"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Event 2 섹션 -->
+      <section id="event2-section" class="event-page__section">
+        <div class="event-page__section-header">
+          <div class="event-page__tag">
+            <span class="tag tag--event">Event 2</span>
+          </div>
+          <div class="event-page__title-group">
+            <h2 class="event-page__title">햇살 가리는 SUN 제품<br />70% 할인</h2>
+            <p class="event-page__subtitle">7개 브랜드의 SUN 제품을 70% 할인가에 만나보세요!</p>
+          </div>
+        </div>
+        <!-- ProductGridCarousel -->
+        <div class="event-page__product-carousel">
+          <div data-include="/src/widgets/Product/ProductGridCarousel/ProductGridCarousel.html"></div>
+        </div>
+      </section>
+
+      <!-- ProductSetCard 섹션 -->
+      <section class="event-page__product-set">
+        <div class="event-page__product-set-container">
+          <!-- Product Set Detail Widget -->
+          <article class="product-set-detail" id="product-set-detail-demo">
+            <div class="product-set-detail__header">
+              <div class="product-set-detail__tag" data-tag-label="Event">
+                <span class="tag tag--event">Event 3</span>
+              </div>
+
+              <h5 class="product-set-detail__title">
+                해를 가려라, SUN 제품<br />
+                세트상품 10% 할인
+              </h5>
+
+              <p class="product-set-detail__subtitle">종아리 마사지기 V3 지퍼 벨크로형 + 무선 목어깨 마사지기</p>
+            </div>
+
+            <div class="product-set-detail__carousel">
+              <div class="product-set-detail__swiper swiper" id="product-set-detail-swiper-demo">
+                <ul class="swiper-wrapper product-set-detail__wrapper">
+                  <li class="swiper-slide product-set-detail__slide">
+                    <figure class="product-set-detail__image">
+                      <img
+                        src="/images/products/product-1.png"
+                        alt="상품 이미지"
+                        class="product-set-detail__img"
+                        loading="lazy"
+                      />
+                    </figure>
+                  </li>
+                  <li class="swiper-slide product-set-detail__slide">
+                    <figure class="product-set-detail__image">
+                      <img
+                        src="/images/products/product-2.png"
+                        alt="상품 이미지"
+                        class="product-set-detail__img"
+                        loading="lazy"
+                      />
+                    </figure>
+                  </li>
+                  <li class="swiper-slide product-set-detail__slide">
+                    <figure class="product-set-detail__image">
+                      <img
+                        src="/images/products/product-3.png"
+                        alt="상품 이미지"
+                        class="product-set-detail__img"
+                        loading="lazy"
+                      />
+                    </figure>
+                  </li>
+                </ul>
+              </div>
+              <!-- 그라데이션 오버레이 -->
+              <div class="product-set-detail__gradient" aria-hidden="true"></div>
+              <!-- Swiper Pagination -->
+              <div class="product-set-detail__pagination" aria-label="이미지 인디케이터"></div>
+            </div>
+
+            <!-- 하단 정보 영역 -->
+            <div class="product-set-detail__content">
+              <!-- ProductSetThumbnailBar -->
+              <div class="product-set-detail__thumb-bar">
+                <div
+                  class="product-set-thumbnail-bar product-set-detail__thumbnail-bar"
+                  data-onclick="onProductSetClick"
+                >
+                  <!-- 제목 영역: 아이콘 + 텍스트 -->
+                  <div class="product-set-thumbnail-bar__title">
+                    <img
+                      src="/images/icons/ic-set-12.svg"
+                      alt=""
+                      class="product-set-thumbnail-bar__icon"
+                      aria-hidden="true"
+                    />
+                    <span class="product-set-thumbnail-bar__title-text">상품 구성</span>
+                  </div>
+
+                  <!-- 썸네일 리스트 -->
+                  <div class="product-set-thumbnail-bar__thumbnails">
+                    <figure class="product-set-thumbnail-bar__thumbnail product-set-thumbnail-bar__thumbnail--first">
+                      <img
+                        src="/images/products/product-1.png"
+                        alt="제품 이미지"
+                        class="product-set-thumbnail-bar__thumbnail-image"
+                        loading="lazy"
+                      />
+                    </figure>
+
+                    <figure class="product-set-thumbnail-bar__thumbnail">
+                      <img
+                        src="/images/products/product-2.png"
+                        alt="제품 이미지"
+                        class="product-set-thumbnail-bar__thumbnail-image"
+                        loading="lazy"
+                      />
+                    </figure>
+
+                    <figure class="product-set-thumbnail-bar__thumbnail">
+                      <img
+                        src="/images/products/product-3.png"
+                        alt="제품 이미지"
+                        class="product-set-thumbnail-bar__thumbnail-image"
+                        loading="lazy"
+                      />
+                    </figure>
+
+                    <!-- 마지막 썸네일 (오버레이 있을 때) -->
+                    <figure class="product-set-thumbnail-bar__thumbnail product-set-thumbnail-bar__thumbnail--last">
+                      <img
+                        src="/images/products/product-4.png"
+                        alt="제품 이미지"
+                        class="product-set-thumbnail-bar__thumbnail-image"
+                        loading="lazy"
+                      />
+                      <!-- 오버레이 -->
+                      <figcaption class="product-set-thumbnail-bar__overlay">
+                        <span class="product-set-thumbnail-bar__overlay-text">+2</span>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 구분선 -->
+              <hr class="product-set-detail__divider" aria-hidden="true" />
+
+              <!-- ProductPriceCartBar -->
+              <div class="product-set-detail__price-bar">
+                <div class="product-price-cart-bar">
+                  <!-- 가격 정보 영역 -->
+                  <dl class="product-price-cart-bar__price">
+                    <!-- 할인적용가 및 원가 -->
+                    <dt class="product-price-cart-bar__label">
+                      <span class="product-price-cart-bar__label-text">할인적용가</span>
+                      <span class="product-price-cart-bar__original-price">$100</span>
+                    </dt>
+
+                    <!-- 할인가 및 할인율 -->
+                    <dd class="product-price-cart-bar__value">
+                      <span class="product-price-cart-bar__discount-rate">20%</span>
+                      <span class="product-price-cart-bar__discount-price">$80</span>
+                    </dd>
+                  </dl>
+
+                  <!-- 장바구니 담기 버튼 -->
+                  <button
+                    type="button"
+                    class="product-price-cart-bar__button"
+                    aria-label="장바구니에 담기"
+                    data-onclick="onAddToCart"
+                  >
+                    <img
+                      src="/images/icons/ic-m-shoppinbag-16.svg"
+                      alt=""
+                      class="product-price-cart-bar__icon"
+                      aria-hidden="true"
+                    />
+                    <span class="product-price-cart-bar__button-text">담기</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- 장바구니 담기 다이얼로그 -->
+            <div data-include="/src/widgets/Dialog/AddToCartDialog/AddToCartDialog.html"></div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 브랜드 및 유의사항 섹션 -->
+      <section class="event-page__footer-section">
+        <!-- 행사 브랜드 -->
+        <div class="event-page__brands-section">
+          <section class="brand-list-section" aria-label="브랜드 목록">
+            <h2 class="brand-list-section__title">브랜드관</h2>
+            <ul class="brand-list-section__grid">
+              <li class="brand" role="button" aria-label="라네즈 브랜드">
+                <figure class="brand__image">
+                  <img src="/images/brands/brand-laneige.png" alt="라네즈 브랜드 로고" class="brand__img" />
+                </figure>
+                <h3 class="brand__name">라네즈</h3>
+              </li>
+              <li class="brand" role="button" aria-label="오쏘몰 브랜드">
+                <figure class="brand__image">
+                  <img src="/images/brands/brand-orthomol.png" alt="오쏘몰 브랜드 로고" class="brand__img" />
+                </figure>
+                <h3 class="brand__name">오쏘몰</h3>
+              </li>
+              <li class="brand" role="button" aria-label="센트룸 브랜드">
+                <figure class="brand__image">
+                  <img src="/images/brands/brand-centrum.png" alt="센트룸 브랜드 로고" class="brand__img" />
+                </figure>
+                <h3 class="brand__name">센트룸</h3>
+              </li>
+              <li class="brand" role="button" aria-label="온누리스토어 브랜드">
+                <figure class="brand__image">
+                  <img src="/images/brands/brand-onnuristore.png" alt="온누리스토어 브랜드 로고" class="brand__img" />
+                </figure>
+                <h3 class="brand__name">온누리스토어</h3>
+              </li>
+              <li class="brand" role="button" aria-label="헤어메스 브랜드">
+                <figure class="brand__image">
+                  <img src="/images/brands/brand-hairmes.png" alt="헤어메스 브랜드 로고" class="brand__img" />
+                </figure>
+                <h3 class="brand__name">헤어메스</h3>
+              </li>
+              <li class="brand" role="button" aria-label="지앤씨 브랜드">
+                <figure class="brand__image">
+                  <img src="/images/brands/brand-gnc.png" alt="지앤씨 브랜드 로고" class="brand__img" />
+                </figure>
+                <h3 class="brand__name">지앤씨(수입)</h3>
+              </li>
+              <li class="brand" role="button" aria-label="라네즈 브랜드">
+                <figure class="brand__image">
+                  <img src="/images/brands/brand-laneige.png" alt="라네즈 브랜드 로고" class="brand__img" />
+                </figure>
+                <h3 class="brand__name">라네즈</h3>
+              </li>
+            </ul>
+          </section>
+        </div>
+
+        <!-- 유의사항 -->
+        <div class="event-page__notice">
+          <div data-include="/src/widgets/Notice/Notice.html"></div>
+        </div>
+      </section>
+
+      <!-- 추천상품 -->
+      <section id="section-recommended" class="event-page__recommended">
+        <div class="event-page__recommended-header">
+          <h2 class="event-page__section-title">추천상품</h2>
+        </div>
+        <div class="event-page__recommended-carousel">
+          <div class="product-carousel" id="product-carousel-recommended">
+            <div class="product-carousel__swiper swiper">
+              <ul class="swiper-wrapper product-carousel__wrapper">
+                <!-- Product cards will be dynamically generated -->
+              </ul>
+            </div>
+            <!-- 이전 버튼 -->
+            <button
+              type="button"
+              class="product-carousel__button product-carousel__button--prev"
+              aria-label="이전 상품"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M15 18L9 12L15 6"
+                  stroke="#1B1E23"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <!-- 다음 버튼 -->
+            <button
+              type="button"
+              class="product-carousel__button product-carousel__button--next"
+              aria-label="다음 상품"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9 18L15 12L9 6"
+                  stroke="#1B1E23"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- 전체상품 -->
+      <section id="section-all" class="event-page__all-products">
+        <!-- HashTag 버튼들 -->
+        <div class="event-page__hashtags">
+          <button class="hash-tag-btn hash-tag-btn--active" type="button">
+            <span class="hash-tag-btn__label">아우구스티누스 바더</span>
+          </button>
+          <button class="hash-tag-btn hash-tag-btn--inactive" type="button">
+            <span class="hash-tag-btn__label">아우구스티누스 바더</span>
+          </button>
+        </div>
+
+        <!-- 정렬/필터링 바 -->
+        <div class="event-page__sort-filter">
+          <div data-include="/src/features/product/ui/SortFilter/SortFilter.html"></div>
+        </div>
+
+        <!-- 전체 상품 리스트 -->
+        <div class="event-page__products-grid">
+          <div data-include="/src/widgets/Product/ProductGrid/ProductGrid.html"></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Scripts -->
+    <script src="/src/shared/lib/include.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- List Chunker Utility -->
+    <script src="/src/widgets/Product/lib/listChunker.js"></script>
+    <!-- Product Data -->
+    <script src="/src/widgets/Product/model/productData.js"></script>
+    <!-- Component Scripts -->
+    <script src="/src/shared/ui/Menu/lib/dropdown.js"></script>
+    <script src="/src/shared/ui/Switch/lib/switch.js"></script>
+    <script src="/src/widgets/Tabs/lib/tabs.js"></script>
+    <script src="/src/widgets/Brand/lib/brandCarousel.js"></script>
+    <script src="/src/widgets/Product/ProductGridCarousel/lib/productGridCarousel.js"></script>
+    <script src="/src/widgets/Product/ProductCarousel/lib/productCarousel.js"></script>
+    <script src="/src/widgets/Product/ProductSetDetail/lib/productSetDetail.js"></script>
+    <script src="/src/shared/ui/Toast/lib/toast.js"></script>
+    <script src="/src/widgets/Dialog/lib/dialog.js"></script>
+    <script src="/src/widgets/Dialog/AddToCartDialog/lib/addToCartDialog.js"></script>
+    <script>
+      // Event 1 브랜드 캐러셀 초기화
+      ;(() => {
+        const carouselEl = document.getElementById('brand-carousel-event1')
+        if (carouselEl && window.Swiper) {
+          new Swiper(carouselEl, {
+            slidesPerView: 3,
+            spaceBetween: 16,
+            navigation: {
+              nextEl: carouselEl.closest('.brand-carousel__container').querySelector('.brand-carousel__button--next'),
+              prevEl: carouselEl.closest('.brand-carousel__container').querySelector('.brand-carousel__button--prev'),
+            },
+            breakpoints: {
+              1024: {
+                slidesPerView: 6,
+                spaceBetween: 16,
+              },
+            },
+          })
+        }
+      })()
+
+      // 추천상품 캐러셀 초기화
+      ;(() => {
+        const carouselEl = document.getElementById('product-carousel-recommended')
+        if (carouselEl && window.Swiper && window.productData) {
+          const products = window.productData.slice(0, 10) // 추천상품 10개
+          const wrapper = carouselEl.querySelector('.product-carousel__wrapper')
+
+          if (wrapper) {
+            // ProductCard를 직접 생성 (이미지 디자인에 맞춤)
+            wrapper.innerHTML = products
+              .map(product => {
+                // 가격에서 $ 제거 (중복 방지)
+                const cleanPrice = (product.discountPrice || product.price || '0').toString().replace(/^\$+/, '')
+                const cleanOriginalPrice = (product.originalPrice || '').toString().replace(/^\$+/, '')
+
+                // 할인율 계산 또는 사용
+                let discountRate = product.discountRate
+                if (!discountRate && cleanOriginalPrice && cleanPrice) {
+                  const original = parseFloat(cleanOriginalPrice)
+                  const discounted = parseFloat(cleanPrice)
+                  if (original > 0 && original > discounted) {
+                    discountRate = Math.round(((original - discounted) / original) * 100)
+                  }
+                }
+
+                // 할인율과 원가 표시 (추천상품은 항상 표시)
+                const discountHtml =
+                  discountRate && cleanOriginalPrice
+                    ? `<div class="product-card__discount">
+                      <span class="product-card__discount-rate">${discountRate}%</span>
+                      <span class="product-card__original-price">$${cleanOriginalPrice}</span>
+                    </div>`
+                    : discountRate
+                    ? `<div class="product-card__discount">
+                      <span class="product-card__discount-rate">${discountRate}%</span>
+                      ${
+                        cleanOriginalPrice
+                          ? `<span class="product-card__original-price">$${cleanOriginalPrice}</span>`
+                          : ''
+                      }
+                    </div>`
+                    : cleanOriginalPrice
+                    ? `<div class="product-card__discount">
+                      <span class="product-card__original-price">$${cleanOriginalPrice}</span>
+                    </div>`
+                    : ''
+
+                return `
+              <li class="swiper-slide product-carousel__slide">
+                <div class="product-card product-card--compact" data-sold-out="${product.soldOut || false}">
+                  <figure class="product-card__image">
+                    <img
+                      src="${product.imageUrl || product.image || '/images/products/product-1.png'}"
+                      alt="${product.name || '상품명'}"
+                      class="product-card__img"
+                    />
+                    ${
+                      !product.soldOut
+                        ? `
+                    <button
+                      type="button"
+                      class="product-card__cart-button"
+                      aria-label="장바구니 담기"
+                    >
+                      <img
+                        src="/images/icons/ic-m-shoppinbag.svg"
+                        alt=""
+                        class="product-card__cart-icon"
+                      />
+                    </button>
+                    `
+                        : `
+                    <button
+                      type="button"
+                      class="product-card__restock-button"
+                      aria-label="재입고 알림"
+                    >
+                      <span class="badge badge--restock">재입고 알림</span>
+                    </button>
+                    `
+                    }
+                  </figure>
+                  <div class="product-card__content">
+                    <dl class="product-card__info">
+                      <dt class="product-card__brand">${product.brand || '브랜드명'}</dt>
+                      <dd class="product-card__name">${product.name || '상품명입니다'}</dd>
+                    </dl>
+                    <div class="product-card__price">
+                      ${discountHtml}
+                      <div class="product-card__price-row">
+                        <span class="product-card__discount-price">$${cleanPrice}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            `
+              })
+              .join('')
+
+            // Swiper 초기화
+            new Swiper(carouselEl.querySelector('.product-carousel__swiper'), {
+              slidesPerView: 2.5,
+              spaceBetween: 12,
+              navigation: {
+                nextEl: carouselEl.querySelector('.product-carousel__button--next'),
+                prevEl: carouselEl.querySelector('.product-carousel__button--prev'),
+              },
+              breakpoints: {
+                1024: {
+                  slidesPerView: 4,
+                  spaceBetween: 16,
+                },
+              },
+            })
+          }
+        }
+      })()
+    </script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<div class="sort-filter" id="productSortFilter">
+  <div class="sort-filter__inner">
+    <!-- 건수 표시: 왼쪽 정렬 -->
+    <div class="sort-filter__count">
+      <span class="sort-filter__count-label">총</span>
+      <span class="sort-filter__count-value" id="productCount">1,234건</span>
+    </div>
+
+    <!-- 품절 토글: 아이콘 + 텍스트 + 스위치 -->
+    <div class="sort-filter__soldout">
+      <img
+        src="/images/icons/ic_info_line.svg"
+        alt=""
+        class="sort-filter__icon"
+        aria-hidden="true"
+      />
+      <span class="sort-filter__soldout-text">품절</span>
+      <button
+        type="button"
+        class="switch switch--off"
+        role="switch"
+        aria-checked="false"
+        aria-label="품절 상품 표시 토글"
+        data-onchange="onSwitchChange"
+      >
+        <span class="switch__thumb"></span>
+      </button>
+    </div>
+
+    <!-- 구분선: 세로 구분선 -->
+    <div class="sort-filter__divider" aria-hidden="true"></div>
+
+    <!-- 정렬 드롭다운: 텍스트 + 화살표 아이콘 -->
+    <div class="sort-filter__dropdown">
+      <div data-include="/src/shared/ui/Menu/DropdownMenu.html"></div>
+    </div>
+
+    <!-- 필터 버튼: 필터 아이콘 -->
+    <button
+      type="button"
+      class="sort-filter__filter-button"
+      aria-label="필터"
+      data-onclick="onFilterClick"
+    >
+      <img
+        src="/images/icons/ic-m-filter.svg"
+        alt="필터"
+        class="sort-filter__filter-icon"
+      />
+    </button>
+  </div>
+</div>
+

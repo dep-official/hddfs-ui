@@ -1,0 +1,33 @@
+<!-- Product Grid Carousel Widget -->
+<div class="product-grid-carousel" id="product-grid-carousel-demo">
+  <div class="product-grid-carousel__swiper swiper">
+    <ul class="swiper-wrapper product-grid-carousel__wrapper">
+      <!-- 슬라이드는 JavaScript로 동적 생성 -->
+    </ul>
+  </div>
+  <!-- Swiper Pagination -->
+  <div class="product-grid-carousel__pagination"></div>
+</div>
+
+<script>
+  (function() {
+    // DOMContentLoaded 후 초기화
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => {
+        if (window.initProductGridCarousel && window.productData) {
+          window.initProductGridCarousel('#product-grid-carousel-demo', {
+            products: window.productData,
+            chunkSize: 6
+          })
+        }
+      })
+    } else {
+      if (window.initProductGridCarousel && window.productData) {
+        window.initProductGridCarousel('#product-grid-carousel-demo', {
+          products: window.productData,
+          chunkSize: 6
+        })
+      }
+    }
+  })();
+</script>

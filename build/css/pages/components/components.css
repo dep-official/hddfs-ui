@@ -1,0 +1,31 @@
+.components-page {
+  max-width: 390px;
+  padding: 0 20px;
+}
+.components-page h1 {
+  margin-bottom: 24px;
+  font-size: 20px;
+}
+.components-page section {
+  margin-bottom: 40px;
+}
+.components-page h2 {
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+.components-page h3 {
+  margin: 16px 0 8px;
+  font-size: 14px;
+}
+.components-page section > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.components-page .product-card-section > div {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+/*# sourceMappingURL=components.css.map */

@@ -1,0 +1,23 @@
+// HashTag Tabs Component (BEM)
+@use '../../../shared/styles/variables' as *;
+@use '../../../shared/styles/mixins' as *;
+
+.hash-tag-tabs {
+  display: flex;
+  align-items: center;
+  gap: 4px; // gap-1
+  overflow-x: auto;
+  padding: 8px 20px; // py-2 px-5
+  scrollbar-width: none; // Firefox
+  -ms-overflow-style: none; // IE/Edge
+
+  &::-webkit-scrollbar {
+    display: none; // Chrome/Safari
+  }
+
+  &__item {
+    flex: 0 0 auto;
+    cursor: pointer;
+  }
+}
+

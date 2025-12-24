@@ -1,0 +1,130 @@
+// Product Set Detail Component (BEM)
+@use "../../../shared/styles/variables" as *;
+@use "../../../shared/styles/mixins" as *;
+
+.product-set-detail {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: $color-white;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__tag {
+    margin-bottom: 8px;
+  }
+
+  &__title {
+    color: $color-dark;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.455em;
+    letter-spacing: -0.05em;
+    text-align: center;
+    width: 100%;
+    margin: 0 0 8px 0;
+  }
+
+  &__subtitle {
+    color: #5c6677;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.429em;
+    letter-spacing: -0.05em;
+    text-align: center;
+    width: 100%;
+    margin: 0 0 24px 0;
+  }
+
+  &__carousel {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 8px 8px 0 0;
+  }
+
+  &__swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__wrapper {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__slide {
+    width: 100%;
+    flex-shrink: 0;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  &__img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  &__gradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 96px;
+    background: linear-gradient(to top, rgba(115, 115, 115, 1) 0%, rgba(115, 115, 115, 0) 100%);
+    pointer-events: none;
+    z-index: 5;
+  }
+
+  &__pagination {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+  }
+
+  &__content {
+    padding: 0 16px 16px 16px;
+    border: 1px solid #dde0e5;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+  }
+
+  &__thumb-bar {
+    margin: 16px 0;
+  }
+
+  &__thumbnail-bar {
+    cursor: pointer;
+  }
+
+  &__divider {
+    width: 100%;
+    height: 0;
+    border: 0;
+    border-top: 1px solid #eef0f2;
+    margin: 0 0 16px 0;
+  }
+
+  &__price-bar {
+    // ProductPriceCartBar 스타일은 별도 파일에서 관리
+  }
+}

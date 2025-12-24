@@ -1,0 +1,15 @@
+{
+  "name": "hddfs-ui",
+  "version": "1.0.0",
+  "description": "HDDFS UI Components",
+  "private": true,
+  "scripts": {
+    "build": "sass src/shared/styles/main.scss build/css/main.css && sass src/pages:build/css/pages",
+    "watch": "sass --watch src/shared/styles/main.scss:build/css/main.css src/pages:build/css/pages",
+    "serve": "python3 -m http.server 8000",
+    "dev": "npm run build && npm run serve"
+  },
+  "devDependencies": {
+    "sass": "^1.80.0"
+  }
+}

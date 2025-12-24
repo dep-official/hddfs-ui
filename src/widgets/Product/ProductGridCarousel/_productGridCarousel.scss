@@ -1,0 +1,61 @@
+// Product Grid Carousel Widget (BEM)
+@use '../../../shared/styles/variables' as *;
+@use '../../../shared/styles/mixins' as *;
+
+.product-grid-carousel {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+
+  &__swiper {
+    width: 100%;
+    height: auto;
+  }
+
+  &__wrapper {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__slide {
+    width: 100%;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    width: 100%;
+  }
+
+  &__pagination {
+    position: relative;
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  &__bullet {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #dde0e5;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    &--active {
+      background-color: $color-dark;
+    }
+  }
+}
+

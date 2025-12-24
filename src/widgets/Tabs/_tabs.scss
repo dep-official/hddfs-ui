@@ -1,0 +1,116 @@
+// Tabs Component (BEM)
+@use "../../shared/styles/variables" as *;
+@use "../../shared/styles/mixins";
+
+.tabs {
+  background-color: $color-white;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  height: 56px;
+  border-bottom: 1px solid #dde0e5;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    height: 100%;
+    list-style: none;
+    margin: 0;
+    position: relative;
+  }
+
+  // Secondary size (스크롤 가능)
+  &--secondary {
+    .tabs__list {
+      gap: 24px;
+      overflow-x: auto;
+      white-space: nowrap;
+      justify-content: flex-start;
+      scrollbar-width: none; // Firefox
+      -ms-overflow-style: none; // IE/Edge
+
+      &::-webkit-scrollbar {
+        display: none; // Chrome/Safari
+      }
+    }
+
+    .tabs__item {
+      flex: 0 0 auto;
+    }
+
+    .tabs__button {
+      width: auto;
+    }
+  }
+
+  &__item {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    // 첫 번째 탭 (행사)
+    &:first-child {
+      width: 111px;
+    }
+
+    // 두 번째 탭 (추천상품)
+    &:nth-child(2) {
+      width: 111px;
+    }
+
+    // 세 번째 탭 (전체상품)
+    &:nth-child(3) {
+      width: 111px;
+    }
+
+    &--active {
+      .tabs__button {
+        color: $color-dark;
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__button {
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: #abb2be;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5em;
+    letter-spacing: -0.05em;
+    transition: color 0.2s ease, font-weight 0.2s ease;
+    text-align: center;
+    width: 100%;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--active {
+      color: $color-dark;
+      font-weight: 700;
+    }
+
+    &:hover {
+      color: $color-dark;
+    }
+  }
+
+  &__active-bar {
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    width: 111px;
+    height: 2px;
+    background-color: $color-dark;
+    transition: left 0.2s ease, width 0.2s ease;
+  }
+}

@@ -1,0 +1,50 @@
+// Variables
+// 디자인 시스템 변수
+
+// Colors
+$color-white: #ffffff;
+$color-black: #000000;
+$color-dark: #1B1E23;
+$color-medium-dark: #3D444F;
+$color-slate-grey: #5C6677;
+$color-border: #DDE0E5;
+$color-hover: #F4F5F7;
+$color-active: #E9EBEF;
+$color-bg-kv: #C9E1FD;
+
+// Typography
+$font-size-h1: 18px;
+$font-size-h2: 28px;
+$font-size-body: 14px;
+$font-size-small: 13px;
+
+$line-height-h1: 1.5em;
+$line-height-h2: 1.429em;
+$line-height-body: 1.429em;
+$line-height-small: 1.462em;
+
+$letter-spacing: -0.05em;
+
+// Spacing
+$spacing-xs: 8px;
+$spacing-sm: 16px;
+$spacing-md: 32px;
+$spacing-lg: 48px;
+
+// Breakpoints
+$breakpoint-xs: 320px;   // 모바일 최소 너비
+$breakpoint-sm: 600px;   // 태블릿 시작
+$breakpoint-expanded: 840px; // Material Window size class: Expanded 시작
+$breakpoint-md: 1200px;  // 데스크톱 시작
+$breakpoint-lg: 1920px;  // 대형 화면 (최대 사이즈)
+
+// Legacy (호환성 유지)
+$breakpoint-lg-old: 1024px;
+
+// Viewport 기준 너비 (px to vw 변환 기준)
+$viewport-base-width-mobile: 390px; // 모바일 기준 너비 (320px~600px)
+$viewport-base-width-tablet: 600px; // 태블릿 기준 너비 (600px~1200px)
+
+// 최대 컨테이너 너비
+$container-max-width: 1920px;
+

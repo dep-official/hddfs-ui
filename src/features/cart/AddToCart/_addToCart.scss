@@ -1,0 +1,19 @@
+// AddToCart Component (BEM)
+@use '../../../shared/styles/variables' as *;
+@use '../../../shared/styles/mixins';
+
+.add-to-cart {
+  position: relative;
+  border-top: 1px solid $color-border;
+  height: 88px;
+  width: 100%;
+
+  &__inner {
+    padding: 0 20px; // px-5
+    display: flex;
+    align-items: center;
+    gap: 42px;
+    height: 100%;
+  }
+}
+

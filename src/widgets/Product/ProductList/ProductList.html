@@ -1,0 +1,157 @@
+<!-- Product List Widget -->
+<div class="product-list">
+  <!-- 상품 카드 그리드 (2단 모바일, 4단 PC) -->
+  <div class="product-list__grid">
+    <!-- ProductCard 1 -->
+    <div class="product-card" data-sold-out="false">
+      <div class="product-card__image">
+        <img
+          src="./images/products/product-1.png"
+          alt="상품명"
+          class="product-card__img"
+        />
+        <button
+          type="button"
+          class="product-card__cart-button"
+          aria-label="장바구니 담기"
+        >
+          <img
+            src="./images/icons/ic-m-shoppinbag.svg"
+            alt=""
+            class="product-card__cart-icon"
+          />
+        </button>
+      </div>
+      <div class="product-card__content">
+        <div class="product-card__info">
+          <span class="product-card__brand">브랜드명</span>
+          <p class="product-card__name">상품명입니다</p>
+        </div>
+        <div class="product-card__price">
+          <div class="product-card__discount">
+            <span class="product-card__discount-rate">20%</span>
+            <span class="product-card__original-price">$100</span>
+          </div>
+          <div class="product-card__price-row">
+            <span class="product-card__discount-price">$80</span>
+            <span class="product-card__price-won">100,000원</span>
+          </div>
+        </div>
+        <div class="product-card__flags">
+          <span class="tag tag--flag">무료배송</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ProductCard 2 -->
+    <div class="product-card" data-sold-out="false">
+      <div class="product-card__image">
+        <img
+          src="./images/products/product-2.png"
+          alt="상품명"
+          class="product-card__img"
+        />
+        <button
+          type="button"
+          class="product-card__cart-button"
+          aria-label="장바구니 담기"
+        >
+          <img
+            src="./images/icons/ic-m-shoppinbag.svg"
+            alt=""
+            class="product-card__cart-icon"
+          />
+        </button>
+      </div>
+      <div class="product-card__content">
+        <div class="product-card__info">
+          <span class="product-card__brand">브랜드명</span>
+          <p class="product-card__md-keyword">MD 추천</p>
+          <p class="product-card__name">상품명입니다</p>
+        </div>
+        <div class="product-card__price">
+          <div class="product-card__discount">
+            <span class="product-card__discount-rate">15%</span>
+          </div>
+          <div class="product-card__price-row">
+            <span class="product-card__discount-price">$85</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ProductCard 3 (품절) -->
+    <div class="product-card" data-sold-out="true">
+      <div class="product-card__image">
+        <img
+          src="./images/products/product-3.png"
+          alt="상품명"
+          class="product-card__img"
+        />
+        <button
+          type="button"
+          class="product-card__restock-button"
+          aria-label="재입고 알림"
+        >
+          <span class="badge badge--restock">재입고 알림</span>
+        </button>
+      </div>
+      <div class="product-card__content">
+        <div class="product-card__info">
+          <span class="product-card__brand">브랜드명</span>
+          <p class="product-card__name">품절 상품명입니다</p>
+        </div>
+        <div class="product-card__price">
+          <div class="product-card__price-row">
+            <span class="product-card__discount-price">$80</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ProductCard 4 -->
+    <div class="product-card" data-sold-out="false">
+      <div class="product-card__image">
+        <img
+          src="./images/products/product-4.png"
+          alt="상품명"
+          class="product-card__img"
+        />
+        <button
+          type="button"
+          class="product-card__video-button"
+          aria-label="영상 재생"
+        >
+          <img
+            src="./images/icons/ic-m-play.svg"
+            alt=""
+            class="product-card__video-icon"
+          />
+        </button>
+        <button
+          type="button"
+          class="product-card__cart-button"
+          aria-label="장바구니 담기"
+        >
+          <img
+            src="./images/icons/ic-m-shoppinbag.svg"
+            alt=""
+            class="product-card__cart-icon"
+          />
+        </button>
+      </div>
+      <div class="product-card__content">
+        <div class="product-card__info">
+          <span class="product-card__brand">브랜드명</span>
+          <p class="product-card__name">영상이 있는 상품</p>
+        </div>
+        <div class="product-card__price">
+          <div class="product-card__price-row">
+            <span class="product-card__discount-price">$90</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

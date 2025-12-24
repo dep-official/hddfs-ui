@@ -1,0 +1,32 @@
+{
+  "notice": {
+    "text": "[공지사항] 로즈몽 外 4개 브랜드 적립금 사용안내",
+    "onClick": "onNoticeClick"
+  },
+  "guideLinks": [
+    { "label": "지점안내", "href": "#" },
+    { "label": "인도장안내", "href": "#" },
+    { "label": "고객센터", "href": "#" },
+    { "label": "입점/제휴", "href": "#" }
+  ],
+  "footerLinks": [
+    { "label": "H.Point", "href": "#" },
+    { "label": "Family Site", "href": "#" },
+    { "label": "㈜현대디에프", "href": "#" }
+  ],
+  "languageLinks": [
+    { "label": "PC버전", "href": "#" },
+    { "label": "中文网", "href": "#" }
+  ],
+  "exchangeRate": {
+    "label": "환율",
+    "value": "$1 = 1,103.1원"
+  },
+  "policyLinks": [
+    { "label": "이용약관", "href": "#", "isHighlighted": false },
+    { "label": "개인정보처리방침", "href": "#", "isHighlighted": true },
+    { "label": "영상정보 처리기기/관리방침", "href": "#", "isHighlighted": false }
+  ],
+  "copyright": "COPYRIGHT © HYUNDAI DF Co,. Ltd. ALL RIGHTS RESERVED."
+}
+

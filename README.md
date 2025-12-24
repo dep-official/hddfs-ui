@@ -2,7 +2,7 @@
 
 ## URL 확인
 
-`https://hddfs.dep.team`
+`https://hddfs.dep.team` (설정중)
 
 ## 설치
 
@@ -48,4 +48,5 @@ build/
 - HTML 파일을 직접 열면 (`file://` 프로토콜) CORS 에러가 발생합니다.
 - 반드시 로컬 서버를 사용하여 파일을 열어야 합니다.
 - 또는 hddfs.dep.team 사이트를 접속하여 확인해주세요.
+
 # hddfs-ui

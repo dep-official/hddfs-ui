@@ -1,0 +1,129 @@
+<!-- Add To Cart Dialog -->
+<dialog class="add-to-cart-dialog" id="add-to-cart-dialog-demo">
+  <div class="add-to-cart-dialog__container">
+    <!-- 헤더 -->
+    <header class="add-to-cart-dialog__header">
+      <h3 class="add-to-cart-dialog__title">세트 구성보기</h3>
+      <button
+        type="button"
+        class="add-to-cart-dialog__close"
+        aria-label="다이얼로그 닫기"
+        data-onclose="onClose"
+      >
+        <img
+          src="./images/icons/ic-m-close.svg"
+          alt=""
+          class="add-to-cart-dialog__close-icon"
+          aria-hidden="true"
+        />
+      </button>
+    </header>
+
+    <!-- 본문: 상품 리스트 -->
+    <div class="add-to-cart-dialog__body">
+      <ul class="add-to-cart-dialog__product-list">
+        <!-- 상품 1 -->
+        <li class="add-to-cart-dialog__product-item">
+          <div class="product-card">
+            <div class="product-card__image">
+              <img
+                src="./images/products/product-1.png"
+                alt="상품명"
+                class="product-card__img"
+              />
+            </div>
+            <div class="product-card__content">
+              <dl class="product-card__info">
+                <dt class="product-card__brand">브랜드명</dt>
+                <dd class="product-card__name">상품명입니다</dd>
+              </dl>
+            </div>
+          </div>
+        </li>
+
+        <!-- 상품 2 -->
+        <li class="add-to-cart-dialog__product-item">
+          <div class="product-card">
+            <div class="product-card__image">
+              <img
+                src="./images/products/product-2.png"
+                alt="상품명"
+                class="product-card__img"
+              />
+            </div>
+            <div class="product-card__content">
+              <dl class="product-card__info">
+                <dt class="product-card__brand">브랜드명</dt>
+                <dd class="product-card__name">상품명입니다</dd>
+              </dl>
+            </div>
+          </div>
+        </li>
+
+        <!-- 상품 3 -->
+        <li class="add-to-cart-dialog__product-item">
+          <div class="product-card">
+            <div class="product-card__image">
+              <img
+                src="./images/products/product-3.png"
+                alt="상품명"
+                class="product-card__img"
+              />
+            </div>
+            <div class="product-card__content">
+              <dl class="product-card__info">
+                <dt class="product-card__brand">브랜드명</dt>
+                <dd class="product-card__name">상품명입니다</dd>
+              </dl>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- 푸터: 수량 조절 및 장바구니 담기 -->
+    <footer class="add-to-cart-dialog__footer">
+      <div class="add-to-cart-dialog__quantity">
+        <span class="add-to-cart-dialog__quantity-label">수량</span>
+        <div class="quantity-button">
+          <button
+            type="button"
+            class="quantity-button__control quantity-button__control--decrease"
+            aria-label="수량 감소"
+            disabled
+          >
+            <img
+              src="./images/icons/ic-m-minus.svg"
+              alt="감소"
+              class="quantity-button__icon"
+            />
+          </button>
+
+          <span class="quantity-button__value">1</span>
+
+          <button
+            type="button"
+            class="quantity-button__control quantity-button__control--increase"
+            aria-label="수량 증가"
+          >
+            <img
+              src="./images/icons/ic-m-plus.svg"
+              alt="증가"
+              class="quantity-button__icon"
+            />
+          </button>
+        </div>
+      </div>
+
+      <button
+        type="button"
+        class="add-to-cart-dialog__button btn btn--filled btn--medium btn--full"
+        aria-label="장바구니에 담기"
+        data-onclick="onAddToCart"
+      >
+        장바구니 담기
+      </button>
+    </footer>
+  </div>
+</dialog>
+

@@ -1,0 +1,12 @@
+// Banner List Component (BEM)
+@use '../../../shared/styles/variables' as *;
+
+.banner-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 335px;
+  margin: 0;
+  padding: 0;
+}
+

@@ -1,0 +1,62 @@
+// Quantity Button Component (BEM)
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+.quantity-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  &__control {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    border: none;
+
+    background-color: $color-white;
+    color: #1b1e23;
+    cursor: pointer;
+    transition:
+      background-color 0.2s ease,
+      opacity 0.2s ease;
+
+    &:hover {
+      background-color: #f4f5f7;
+    }
+
+    &:active {
+      background-color: #e9ebef;
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    &:focus-visible {
+      outline: 2px solid #1b1e23;
+      outline-offset: 2px;
+    }
+  }
+
+  &__icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  &__value {
+    min-width: 20px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.43;
+    letter-spacing: -0.05em;
+    color: #1b1e23;
+  }
+}
+
+

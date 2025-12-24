@@ -1,0 +1,63 @@
+// Event Banner Item Component (BEM)
+@use '../../../shared/styles/variables' as *;
+
+.event-banner-item {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+
+  &__image {
+    flex-shrink: 0;
+    width: 100px;
+    height: 100px;
+    margin: 0;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  &__img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: multiply;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex: 1;
+    text-align: center;
+    margin: 0;
+  }
+
+  &__condition {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.46em;
+    letter-spacing: -0.05em;
+    color: #A58768;
+    margin: 0;
+  }
+
+  &__description {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.43em;
+    letter-spacing: -0.05em;
+    color: $color-medium-dark;
+    margin: 0;
+  }
+
+  &__divider {
+    height: 0;
+    border: 0;
+    border-top: 1px solid #EEF0F2;
+    width: 100%;
+    margin: 0;
+  }
+}
+

@@ -1,0 +1,15 @@
+// Product List Compact Widget (BEM) - 3단 그리드
+@use '../../../shared/styles/variables' as *;
+@use '../../../shared/styles/mixins' as *;
+
+.product-list-compact {
+  width: 100%;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px 8px; // gap-x gap-y
+    row-gap: 32px; // gap-y-8
+  }
+}
+

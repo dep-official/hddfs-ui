@@ -1,0 +1,103 @@
+// KV Banner Component (BEM)
+@use "../../../shared/styles/variables" as *;
+
+.kv-banner {
+  position: relative;
+  width: 100%;
+  margin-bottom: 16px;
+  outline: none;
+
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 360px;
+    background-color: #c9e1fd;
+
+    @media (min-width: 1024px) {
+      height: 540px;
+    }
+  }
+
+  &__header {
+    position: relative;
+    padding: 48px 20px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__title-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  &__period {
+    color: $color-medium-dark;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1.46em;
+    letter-spacing: -0.05em;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+  }
+
+  &__title {
+    color: #1b1e23;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.43em;
+    letter-spacing: -0.05em;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+  }
+
+  &__subtitle {
+    color: #5c6677;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.43em;
+    letter-spacing: -0.05em;
+    text-align: center;
+    width: 100%;
+    margin: 0 0 32px 0;
+  }
+
+  &__image-container {
+    position: relative;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  &__image {
+    width: 100%;
+    aspect-ratio: 804 / 512;
+    max-width: 900px;
+    margin: 0 auto;
+    min-height: 280px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 0;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+
+  // 클릭 가능한 경우
+  &[data-onclick] {
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,78 @@
+// ProductSetThumbnailBar Component (BEM)
+@use '../../../../shared/styles/variables' as *;
+@use '../../../../shared/styles/mixins';
+
+.product-set-thumbnail-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 32px;
+  cursor: pointer;
+
+  &__title {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  &__icon {
+    width: 12px; // w-3
+    height: 12px; // h-3
+  }
+
+  &__title-text {
+    color: #3d444f;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.5em;
+    letter-spacing: -0.05em;
+  }
+
+  &__thumbnails {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+  }
+
+  &__thumbnail {
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    width: 32px; // w-8
+    height: 32px; // h-8
+
+    &--first {
+      border-radius: 4px 0 0 4px; // rounded-l
+    }
+
+    &--last {
+      border-radius: 0 4px 4px 0; // rounded-r
+    }
+  }
+
+  &__thumbnail-image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(27, 30, 35, 0.5); // bg-[#1B1E23] opacity-50
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 4px 4px 0; // rounded-r
+  }
+
+  &__overlay-text {
+    color: $color-white;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 1.545em;
+    letter-spacing: -0.05em;
+  }
+}
+

@@ -1,0 +1,33 @@
+<div class="dropdown">
+  <button
+    type="button"
+    class="dropdown__button"
+    aria-label="옵션 선택"
+    aria-expanded="false"
+    aria-haspopup="listbox"
+    data-dropdown-id="example-dropdown"
+  >
+    <span class="dropdown__value" data-dropdown-value>베스트순</span>
+    <span class="dropdown__icon" aria-hidden="true">▾</span>
+  </button>
+
+  <div class="dropdown__menu" data-dropdown-menu>
+    <ul class="dropdown__list" role="listbox">
+      <li>
+        <button type="button" class="dropdown__option" data-option-value="베스트순">
+          베스트순
+        </button>
+      </li>
+      <li>
+        <button type="button" class="dropdown__option" data-option-value="낮은 가격순">
+          낮은 가격순
+        </button>
+      </li>
+      <li>
+        <button type="button" class="dropdown__option" data-option-value="높은 가격순">
+          높은 가격순
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>

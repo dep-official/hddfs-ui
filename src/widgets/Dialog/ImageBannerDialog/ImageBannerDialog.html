@@ -1,0 +1,30 @@
+<!-- Image Banner Dialog -->
+<dialog class="image-banner-dialog" id="image-banner-dialog-demo" role="dialog" aria-labelledby="dialog-title" aria-modal="true">
+  <!-- Dialog Top Indicator -->
+  <div data-include="./src/widgets/Dialog/ui/Indicator/TopIndicator.html"></div>
+
+  <!-- 다이얼로그 내용 -->
+  <div class="image-banner-dialog__content">
+    <!-- 검색 컴포넌트 -->
+    <div class="image-banner-dialog__search" data-include="./src/shared/ui/Search/Search.html"></div>
+
+    <!-- 탭 컴포넌트 (선택사항) -->
+    <div class="image-banner-dialog__tabs" style="display: none;">
+      <div data-include="./src/widgets/Tabs/Tabs.html"></div>
+    </div>
+
+    <!-- 이미지 배너 리스트 -->
+    <div class="image-banner-dialog__banners">
+      <div data-include="./src/widgets/Banner/ImageBannerList/ImageBannerList.html"></div>
+    </div>
+  </div>
+
+  <!-- 다이얼로그 액션 버튼 (선택사항) -->
+  <div class="image-banner-dialog__actions" style="display: none;">
+    <div data-include="./src/widgets/Dialog/ui/DialogActions.html"></div>
+  </div>
+
+  <!-- Dialog Bottom Indicator -->
+  <div data-include="./src/widgets/Dialog/ui/Indicator/BottomIndicator.html"></div>
+</dialog>
+

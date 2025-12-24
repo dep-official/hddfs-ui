@@ -1,0 +1,59 @@
+// Product Carousel Widget (BEM)
+@use '../../../shared/styles/variables' as *;
+@use '../../../shared/styles/mixins' as *;
+
+.product-carousel {
+  position: relative;
+  width: 100%;
+
+  &__swiper {
+    width: 100%;
+  }
+
+  &__wrapper {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__slide {
+    width: 33.333%;
+    flex-shrink: 0;
+  }
+
+  &__button {
+    display: none;
+    position: absolute;
+    top: 33.333%;
+    transform: translateY(-33.333%);
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-white;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+
+    &:disabled {
+      opacity: 0;
+      cursor: default;
+    }
+
+    @media (min-width: 1024px) {
+      display: flex;
+    }
+
+    &--prev {
+      left: -20px;
+    }
+
+    &--next {
+      right: -20px;
+    }
+  }
+}
+

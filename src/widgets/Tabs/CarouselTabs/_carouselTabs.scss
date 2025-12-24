@@ -1,0 +1,88 @@
+// Carousel Tabs Component (BEM)
+@use '../../../shared/styles/variables' as *;
+@use '../../../shared/styles/mixins' as *;
+
+.tabs-carousel {
+  background-color: $color-white;
+  border-bottom: 1px solid #dde0e5;
+  position: relative;
+  width: 100%;
+
+  &__swiper {
+    height: 100%;
+    scrollbar-width: none; // Firefox
+    -ms-overflow-style: none; // IE/Edge
+
+    &::-webkit-scrollbar {
+      display: none; // Chrome/Safari
+    }
+  }
+
+  &__wrapper {
+    padding: 0 20px; // px-5
+  }
+
+  &__item {
+    position: relative;
+    height: 100%;
+    width: auto;
+    flex-shrink: 0;
+
+    &:not(:first-child) {
+      padding-left: 24px; // pl-6
+    }
+  }
+
+  &__button {
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: color 0.2s ease, font-weight 0.2s ease;
+    white-space: nowrap;
+
+    // P2 size (기본)
+    &--p2 {
+      font-size: 14px;
+      line-height: 1.429em;
+      letter-spacing: -0.05em;
+      color: #788497;
+      font-weight: 400;
+    }
+
+    // H4 size
+    &--h4 {
+      font-size: 16px;
+      line-height: 1.5em;
+      letter-spacing: -0.05em;
+      color: #abb2be;
+      font-weight: 400;
+    }
+
+    &--active {
+      &.tabs-carousel__button--p2 {
+        color: $color-dark;
+        font-weight: 700;
+      }
+
+      &.tabs-carousel__button--h4 {
+        color: $color-dark;
+      }
+    }
+
+    &:hover {
+      color: $color-dark;
+    }
+  }
+
+  &__active-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: $color-dark;
+    transition: all 0.2s ease;
+  }
+}
+

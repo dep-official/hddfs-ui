@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>Components Index</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/build/css/main.css" />
+    <style>
+      body {
+        background-color: #f9fafc;
+        min-height: 100vh;
+        padding: 40px 20px;
+      }
+
+      .index-page {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .index-page__header {
+        text-align: center;
+        margin-bottom: 64px;
+      }
+
+      .index-page__title {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 1.5em;
+        letter-spacing: -0.05em;
+        color: #1b1e23;
+        margin: 0 0 16px 0;
+      }
+
+      .index-page__subtitle {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5em;
+        letter-spacing: -0.05em;
+        color: #5c6677;
+        margin: 0;
+      }
+
+      .index-page__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 24px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .index-page__card {
+        background-color: #ffffff;
+        border-radius: 12px;
+        padding: 32px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        text-decoration: none;
+        display: block;
+        color: inherit;
+      }
+
+      .index-page__card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+      }
+
+      .index-page__card-title {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 1.5em;
+        letter-spacing: -0.05em;
+        color: #1b1e23;
+        margin: 0 0 12px 0;
+      }
+
+      .index-page__card-description {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.5em;
+        letter-spacing: -0.05em;
+        color: #5c6677;
+        margin: 0 0 16px 0;
+      }
+
+      .index-page__card-link {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.5em;
+        letter-spacing: -0.05em;
+        color: #ea2829;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .index-page__card-link:hover {
+        text-decoration: underline;
+      }
+
+      .index-page__card-link::after {
+        content: '→';
+        font-size: 16px;
+      }
+
+      @media (min-width: 1024px) {
+        .index-page__grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="index-page">
+      <header class="index-page__header">
+        <h1 class="index-page__title">HDDFS UI Components</h1>
+        <p class="index-page__subtitle">컴포넌트 및 페이지 샘플을 확인하세요</p>
+      </header>
+
+      <ul class="index-page__grid">
+        <li>
+          <a href="./src/pages/event/event.html" class="index-page__card">
+            <h2 class="index-page__card-title">Event Page</h2>
+            <p class="index-page__card-description">
+              이벤트 샘플 페이지입니다. 다양한 컴포넌트가 조합된 실제 사용 예시를 확인할 수 있습니다.
+            </p>
+            <span class="index-page__card-link">페이지 보기</span>
+          </a>
+        </li>
+        <li>
+          <a href="./components.html" class="index-page__card">
+            <h2 class="index-page__card-title">Components</h2>
+            <p class="index-page__card-description">모든 UI 컴포넌트의 디자인 시스템을 확인할 수 있습니다.</p>
+            <span class="index-page__card-link">컴포넌트 보기</span>
+          </a>
+        </li>
+      </ul>
+    </main>
+  </body>
+</html>
