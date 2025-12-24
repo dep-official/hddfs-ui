@@ -220,7 +220,15 @@
         </div>
         <!-- ProductGridCarousel -->
         <div class="event-page__product-carousel">
-          <div data-include="/src/widgets/Product/ProductGridCarousel/ProductGridCarousel.html"></div>
+          <div class="product-grid-carousel" id="product-grid-carousel-event2">
+            <div class="product-grid-carousel__swiper swiper">
+              <ul class="swiper-wrapper product-grid-carousel__wrapper">
+                <!-- 슬라이드는 JavaScript로 동적 생성 -->
+              </ul>
+            </div>
+            <!-- Swiper Pagination -->
+            <div class="product-grid-carousel__pagination"></div>
+          </div>
         </div>
       </section>
 
@@ -549,6 +557,27 @@
     <script src="/src/widgets/Dialog/AddToCartDialog/lib/addToCartDialog.js"></script>
     <script src="/src/widgets/Dialog/ImageBannerDialog/lib/imageBannerDialog.js"></script>
     <script>
+      // Event 2 ProductGridCarousel 초기화
+      ;(() => {
+        const carouselEl = document.getElementById('product-grid-carousel-event2')
+        if (carouselEl && window.Swiper && window.productData && window.initProductGridCarousel) {
+          // Event 2용 제품 데이터 (70% 할인 적용, 이미지에 맞춤)
+          const event2Products = window.productData.slice(0, 6).map((product, index) => ({
+            ...product,
+            discountRate: 70,
+            originalPrice: '39',
+            price: '11.7',
+            // 일부 제품은 품절 상태로 설정 (4번째 제품)
+            soldOut: index === 3,
+          }))
+
+          window.initProductGridCarousel('#product-grid-carousel-event2', {
+            products: event2Products,
+            chunkSize: 6,
+          })
+        }
+      })()
+
       // Event 1 브랜드 캐러셀 초기화
       ;(() => {
         const carouselEl = document.getElementById('brand-carousel-event1')
