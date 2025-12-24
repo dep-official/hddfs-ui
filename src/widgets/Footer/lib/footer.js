@@ -44,7 +44,7 @@ const renderFooter = data => {
     <a class="footer__notice" href="#" ${notice.onClick ? `data-onclick="${notice.onClick}"` : ''}>
       <p class="footer__notice-text">${notice.text}</p>
       <img
-        src="./images/icons/ic-m-arrow-right-16.svg"
+        src="/images/icons/ic-m-arrow-right-16.svg"
         alt="더보기"
         class="footer__notice-icon"
         aria-hidden="true"
@@ -74,7 +74,7 @@ const renderFooter = data => {
               <a href="${link.href}" class="footer__link">
                 <span class="footer__link-text">${link.label}</span>
                 <img
-                  src="./images/icons/ic-m-arrow-right-18.svg"
+                  src="/images/icons/ic-m-arrow-right-18.svg"
                   alt=""
                   class="footer__link-icon"
                   aria-hidden="true"
