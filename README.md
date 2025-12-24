@@ -2,7 +2,7 @@
 
 ## URL 확인
 
-`https://hddfs.dep.team` (설정중)
+`https://hddfs.dep.team`
 
 ## 설치
 
